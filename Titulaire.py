@@ -27,5 +27,10 @@ class Titulaire:
             return this._comptes[nCompte - 1]
 
     def ajoutCompte(this, compte):
-        this._comptes = 
+        assert isinstance(compte, CompteSimple)
+        this._comptes.append(compte)
+
+    def supprimeCompte(this, nCompte):
+        this._comptes.remove(this.getCompte(nCompte))
+
 
